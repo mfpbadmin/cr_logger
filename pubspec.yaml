@@ -34,10 +34,10 @@ dependencies:
   logger: ^2.0.2+1
 
   # BSD
-  package_info_plus: ^5.0.1
+  package_info_plus: ^8.1.1
 
   # MIT
-  uuid: ^3.0.7
+  uuid: ^4.4.2
 
   # MIT
   app_settings: ^5.1.1
@@ -51,7 +51,7 @@ dependencies:
   inspector: ^2.1.0
 
   # BSD-3-Clause
-  shared_preferences: ^2.2.2
+  shared_preferences: 2.3.3
   # MIT
   split_view: ^3.2.1
 
