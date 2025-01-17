@@ -56,54 +56,54 @@ class HttpResponseWidgetState extends State<HttpResponseWidget>
             // const SizedBox(height: 12),
 
             /// Data
-            ValueListenableBuilder(
-              valueListenable: _allExpandedNodesNotifier,
-              builder: (
-                BuildContext context,
-                bool isAllNodesExpanded,
-                Widget? child,
-              ) {
-                return RoundedCard(
-                  padding: const EdgeInsets.only(
-                    left: 16,
-                    top: 10,
-                    right: 16,
-                    bottom: 12,
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            'Data',
-                            style: CRStyle.subtitle1BlackSemiBold16,
-                          ),
-                          if (data != null)
-                            ExpandArrowButton(
-                              isExpanded: isAllNodesExpanded,
-                              onTap: () => _allExpandedNodesNotifier.value =
-                                  !isAllNodesExpanded,
-                            ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      if (data is Map<String, dynamic> || data is List)
-                        JsonWidget(
-                          data,
-                          allExpandedNodes: isAllNodesExpanded,
-                          key: _jsonWidgetValueKey,
-                        )
-                      else
-                        Text(
-                          data?.toString() ?? 'No response',
-                          style: CRStyle.bodyBlackMedium14,
-                        ),
-                    ],
-                  ),
-                );
-              },
-            ),
+            // ValueListenableBuilder(
+            //   valueListenable: _allExpandedNodesNotifier,
+            //   builder: (
+            //     BuildContext context,
+            //     bool isAllNodesExpanded,
+            //     Widget? child,
+            //   ) {
+            //     return RoundedCard(
+            //       padding: const EdgeInsets.only(
+            //         left: 16,
+            //         top: 10,
+            //         right: 16,
+            //         bottom: 12,
+            //       ),
+            //       child: Column(
+            //         children: [
+            //           Row(
+            //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //             children: [
+            //               const Text(
+            //                 'Data',
+            //                 style: CRStyle.subtitle1BlackSemiBold16,
+            //               ),
+            //               if (data != null)
+            //                 ExpandArrowButton(
+            //                   isExpanded: isAllNodesExpanded,
+            //                   onTap: () => _allExpandedNodesNotifier.value =
+            //                       !isAllNodesExpanded,
+            //                 ),
+            //             ],
+            //           ),
+            //           const SizedBox(height: 8),
+            //           if (data is Map<String, dynamic> || data is List)
+            //             JsonWidget(
+            //               data,
+            //               allExpandedNodes: isAllNodesExpanded,
+            //               key: _jsonWidgetValueKey,
+            //             )
+            //           else
+            //             Text(
+            //               data?.toString() ?? 'No response',
+            //               style: CRStyle.bodyBlackMedium14,
+            //             ),
+            //         ],
+            //       ),
+            //     );
+            //   },
+            // ),
           ],
         ),
       ),
