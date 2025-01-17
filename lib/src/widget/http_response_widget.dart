@@ -4,7 +4,6 @@ import 'package:cr_logger/src/widget/expand_arrow_button.dart';
 import 'package:cr_logger/src/widget/headers_expansion_tile.dart';
 import 'package:cr_logger/src/widget/json_widget/json_widget.dart';
 import 'package:cr_logger/src/widget/rounded_card.dart';
-import 'package:cr_logger/src/widget/url_value_widget.dart';
 import 'package:flutter/material.dart';
 
 class HttpResponseWidget extends StatefulWidget {
@@ -53,8 +52,8 @@ class HttpResponseWidgetState extends State<HttpResponseWidget>
             const SizedBox(height: 12),
 
             /// URL
-            UrlValueWidget(url: request?.url),
-            const SizedBox(height: 12),
+            // UrlValueWidget(url: request?.url),
+            // const SizedBox(height: 12),
 
             /// Data
             ValueListenableBuilder(

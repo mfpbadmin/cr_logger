@@ -6,7 +6,6 @@ import 'package:cr_logger/src/res/styles.dart';
 import 'package:cr_logger/src/widget/body_expansion_tile.dart';
 import 'package:cr_logger/src/widget/headers_expansion_tile.dart';
 import 'package:cr_logger/src/widget/params_expansion_tile.dart';
-import 'package:cr_logger/src/widget/url_value_widget.dart';
 import 'package:flutter/material.dart';
 
 class HttpRequestWidget extends StatefulWidget {
@@ -148,12 +147,12 @@ class HttpRequestWidgetState extends State<HttpRequestWidget>
             const SizedBox(height: 12),
 
             /// URL
-            UrlValueWidget(
-              url: request?.url,
-              requestTime: request?.requestTime,
-              responseTime: response?.responseTime,
-            ),
-            const SizedBox(height: 12),
+            // UrlValueWidget(
+            //   url: request?.url,
+            //   requestTime: request?.requestTime,
+            //   responseTime: response?.responseTime,
+            // ),
+            // const SizedBox(height: 12),
 
             /// Params
             ParamsExpansionTile(

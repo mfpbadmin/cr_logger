@@ -5,7 +5,7 @@ String getUrlWithHiddenParams(String url, {bool showFullPath = false}) {
 
   /// Get path without scheme.
   /// E.g. httpbin/anything instead of https://httpbin/anything
-  final absolutePath = '${uri?.host}${uri?.path}';
+  final absolutePath = '${uri?.path}';
 
   /// Get all parameters
   final parameters = uri?.queryParameters;
