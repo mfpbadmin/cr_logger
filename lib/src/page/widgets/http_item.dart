@@ -135,11 +135,13 @@ class HttpItem extends StatelessWidget {
   }
 
   void _onCopy(BuildContext context) {
+    final uri = Uri.tryParse(httpBean.request?.url ?? '');
+
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          'Copy \n"${httpBean.request?.url}"',
+          'Copy \n"${uri?.path}"',
           maxLines: 4,
           overflow: TextOverflow.ellipsis,
         ),
