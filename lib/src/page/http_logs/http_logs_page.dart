@@ -104,9 +104,11 @@ class HttpLogsPageState extends BasePageWithProgress<HttpLogsPage> {
   }
 
   Future<void> _onRemoveLogPressed(HttpBean httpBean) async {
+    final uri = Uri.tryParse(httpBean.request?.url ?? '');
+
     final okConfirmation = await showRemoveLogBottomSheet(
       context,
-      message: httpBean.request?.url ?? '',
+      message: uri?.path ?? '',
     );
     if (okConfirmation) {
       _removeLog(httpBean);
