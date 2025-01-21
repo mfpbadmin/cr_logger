@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:cr_logger/cr_logger.dart';
 import 'package:cr_logger/src/constants.dart';
 import 'package:cr_logger/src/cr_logger_helper.dart';
-import 'package:cr_logger/src/extensions/extensions.dart';
 import 'package:cr_logger/src/interceptor/cr_http_adapter.dart';
 import 'package:cr_logger/src/interceptor/cr_http_client_adapter.dart';
 import 'package:cr_logger/src/managers/log_manager.dart';
@@ -152,7 +151,7 @@ final class CRLoggerInitializer {
 
     if (theme != null) {
       CRLoggerHelper.instance.theme =
-          theme.copyWithDefaultCardTheme(loggerTheme.cardTheme);
+          theme.copyWith(cardTheme: loggerTheme.cardTheme);
     }
     this.logFileName = logFileName ?? this.logFileName;
     this.hiddenFields = hiddenFields ?? [];
